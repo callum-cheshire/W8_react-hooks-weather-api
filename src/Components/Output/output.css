@@ -1,0 +1,51 @@
+h1 {
+  color: blue;
+  font-family: verdana;
+  font-size: 300%;
+}
+
+img {
+  --angle: 0deg;
+  width: 75vmin;
+  height: 50vmin;
+  border: 2.5vmin solid;
+  border-image: conic-gradient(
+      from var(--angle),
+      red,
+      yellow,
+      lime,
+      aqua,
+      blue,
+      magenta,
+      red
+    )
+    1;
+
+  animation: 5s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+p {
+  background-color: rgb(169, 169, 169, 0.5);
+  background-color: 20%;
+  color: white;
+  font-family: verdana;
+  font-size: larger;
+  border: 1px;
+  margin-left: 300px;
+  margin-right: 300px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+}
